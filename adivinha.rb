@@ -23,16 +23,31 @@ end
 
 segredo = 151
 tentativas = 1
-
+continua = 1
+continuaString = ''
 puts("Digite seu nome: ")
 
 nome = gets
 
-while (tentativas <= 3)
+while (tentativas.to_i <= 3 && continua.to_i == 1)
 
 	break if check?(segredo, nome, tentativas)
 	
 	tentativas += 1
+	if tentativas == 4
+		puts("Deseja continuar? Y/N")
+		continuaString = gets
+		continuaString = continuaString.upcase
+		if (continuaString.to_s == 'Y')
+			continua = 1
+		elseif (continua.to_s == 'N')
+			continua = 0
+		else
+			puts("Operação inválida")
+			continua = 1
+			tentativas = 3
+			end	
+	end
 end
 
 
