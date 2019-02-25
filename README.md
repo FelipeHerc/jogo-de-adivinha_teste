@@ -1,2 +1,2 @@
-# jogo-de-adivinha_teste
-Um simples jogo de adivinhação escrito em Ruby.
+# jogo-de-advinha
+um simples jogo de advinhação escrito em Ruby
